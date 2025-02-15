@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 50%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        .news {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .news-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        footer {
+            text-align: center;
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+          <img src="logosvc.png" alt="โลโก้สถานศึกษา">
+          <h1>วิทยาลัยอาชีวศึกษาสุราษฎร์ธานี</h1>
+      </div>
+      <nav>
+          <ul>
+              <li><a href="index.html">หน้าแรก</a></li> <!-- index.html -->
+          <li><a href="ผู้บริหาร.html">ผู้บริหาร</a></li> <!-- ผู้บริหาร.html -->
+          <li><a href="บุคลากร.html">บุคลากร</a></li> <!-- บุคลากร.html -->
+          <li><a href="นักเรียนนักศึกษา.html">นักเรียนนักศึกษา</a></li> <!-- นักเรียนนักศึกษา.html -->
+          <li><a href="สาขาวิชา.html">สาขาวิชา</a></li> <!-- สาขาวิชา.html -->
+          </ul>
+      </nav>
+  </header>
+    <main>
+      <div class="py-12 gap-2 max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-5">
+        <div
+          class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 text-gray-900"
+        >
+          <header class="border-b pb-1 flex items-center space-x-2">
+            <h2 class="font-bold text-xl">
+              หลักสูตรประกาศนียบัตรวิชาชีพ (ปวช.) พุทธศักราช 2564 หลักสูตร 3 ปี
+            </h2>
+          </header>
+          <article class="py-2 grid grid-cols-2 gap-6">
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาพาณิชยกรรม</h3>
+              </header>
+              <article class="px-6 py-4 bg-gray-100 rounded-md shadow-md">
+                <ul class="space-y-4">
+                  <li>
+                    <h4 class="font-semibold text-xl text-blue-600">สาขาวิชาการบัญชี</h4>
+                    <ul class="space-y-2 list-disc pl-6">
+                      <li class="text-gray-700">สาขางานการบัญชี</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold text-xl text-blue-600">สาขาวิชาการตลาด</h4>
+                    <ul class="space-y-2 list-disc pl-6">
+                      <li class="text-gray-700">สาขางานการตลาด</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold text-xl text-blue-600">สาขาวิชาการเลขานุการ</h4>
+                    <ul class="space-y-2 list-disc pl-6">
+                      <li class="text-gray-700">สาขางานการเลขานุการ</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold text-xl text-blue-600">สาขาวิชาคอมพิวเตอร์ธุรกิจ</h4>
+                    <ul class="space-y-2 list-disc pl-6">
+                      <li class="text-gray-700">สาขางานคอมพิวเตอร์ธุรกิจ</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+              
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาศิลปกรรม</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาวิจิตรศิลป์</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานวิจิตรศิลป์</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการออกแบบ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการออกแบบ</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาคอมพิวเตอร์กราฟิก</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานคอมพิวเตอร์กราฟิก</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาคหกรรม</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาธุรกิจคหกรรม</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานธุรกิจคหกรรม</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาแฟชั่นและสิ่งทอ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานแฟชั่นดีไซน์</li>
+                      <li>สาขางานธุรกิจอาหาร</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาอาหารและโภชนาการ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานอาหารและโภชนาการ</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมท่องเที่ยว
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการโรงแรม</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการโรงแรม</li>
+                      <li>สาขางานการโรงแรม (ทวิภาคี)</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการท่องเที่ยว</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการท่องเที่ยว</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาอุตสาหกรรมอาหาร</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาอาหารและโภชนาการ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานอาหารและโภชนาการ</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาศิลปกรรมและเศรษฐกิจสร้างสรรค์
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาวิจิตรศิลป์</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานวิจิตรศิลป์</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการออกแบบ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการออกแบบ</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาดิจิทัลกราฟิก</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานดิจิทัลกราฟิก</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมแฟชั่นและสิ่งทอ
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาแฟชั่นและสิ่งทอ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานแฟชั่นและสิ่งทอ</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมดิจิทัลและเทคโนโลยีสารสนเทศ
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาเทคโนโลยีสารสนเทศ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานเทคโนโลยีสารสนเทศ</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">
+                      สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล
+                    </h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานเทคโนโลยีธุรกิจดิจิทัล</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาเทคโนโลยีสารสนเทศและการสื่อสาร
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาเทคโนโลยีสารสนเทศ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>
+                        สาขางานการโปรแกรมคอมพิวเตอร์เว็บและอุปกรณ์เคลื่อนที่
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+          </article>
+        </div>
+        <div
+          class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 text-gray-900"
+        >
+          <header class="border-b pb-1 flex items-center space-x-2">
+            <h2 class="font-bold text-xl">
+              หลักสูตรประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) พุทธศักราช 2567
+              หลักสูตร 2 ปี รับจากผู้สำเร็จการศึกษาระดับ ปวช.
+            </h2>
+          </header>
+          <article class="py-2 grid grid-cols-2 gap-6">
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาบริหารธุรกิจ</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการบัญชี</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการบัญชี</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการตลาด</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการตลาด</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการจัดการธุรกิจ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการจัดการธุรกิจ</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">
+                      สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล
+                    </h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานธุรกิจดิจิทัล</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการจัดการ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการจัดการ</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">
+                      สาขาวิชาการจัดการโลจิสติกส์และซัพพลายเชน
+                    </h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการจัดการคลังสินค้า (ทวิภาคี)</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาคหกรรม</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาธุรกิจคหกรรม</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานธุรกิจคหกรรม</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาอาหารและโภชนาการ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานอาหารและโภชนาการ</li>
+                      <li>สาขางานอาหารและโภชนาการ (ทวิภาคี)</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาเชฟอาหารไทย</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานเชฟอาหารไทย (ทวิภาคี)</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมท่องเที่ยว
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการโรงแรม</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการโรงแรม</li>
+                      <li>สาขางานบริการอาหารและเครื่องดื่ม</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการท่องเที่ยว</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการท่องเที่ยว</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมโลจิสติกส์
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">
+                      สาขาวิชาการจัดการโลจิสติกส์และซัพพลายเชน
+                    </h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการจัดการโลจิสติกส์และซัพพลายเชน</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาอุตสาหกรรมอาหาร</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาอาหารและโภชนาการ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานอาหารและโภชนาการ</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาเชฟอาหารไทย</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานเชฟอาหารไทย</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาศิลปกรรมและเศรษฐกิจสร้างสรรค์
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาดิจิทัลกราฟิก</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานดิจิทัลกราฟิก</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาศิลปกรรม</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาดิจิทัลกราฟิก</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานดิจิทัลกราฟิก</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมแฟชั่นและสิ่งทอ
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">
+                      สาขาวิชาเทคโนโลยีแฟชั่นและเครื่องแต่งกาย
+                    </h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานเทคโนโลยีแฟชั่นและเครื่องแต่งกาย</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมดิจิทัลและเทคโนโลยีสารสนเทศ
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">
+                      สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล
+                    </h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานเทคโนโลยีธุรกิจดิจิทัล</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+          </article>
+        </div>
+        <div
+          class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 text-gray-900"
+        >
+          <header class="border-b pb-1 flex items-center space-x-2">
+            <h2 class="font-bold text-xl">
+              หลักสูตรประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) พุทธศักราช 2564
+              หลักสูตร 2 ปี รับจากผู้สำเร็จการศึกษาระดับชั้น ม.6
+            </h2>
+          </header>
+          <article class="py-2 grid grid-cols-2 gap-6">
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">วิชาบริหารธุรกิจ</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">การจัดการธุรกิจ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>การจัดการธุรกิจ</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">เทคโนโลยีธุรกิจดิจิทัล</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>ธุรกิจดิจิทัล</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">การจัดการ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>การจัดการ</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">วิชาคหกรรม</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">ธุรกิจคหกรรม</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>ธุรกิจคหกรรม</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">อาหารและโภชนาการ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>อาหารและโภชนาการ</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">วิชาอุตสาหกรรมท่องเที่ยว</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">การโรงแรม</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>การโรงแรม</li>
+                      <li>บริการอาหารและเครื่องดื่ม</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">การท่องเที่ยว</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>การท่องเที่ยว</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">วิชาอุตสาหกรรมโลจิสติกส์</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">
+                      การจัดการโลจิสติกส์และซัพพลายเชน
+                    </h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>การจัดการโลจิสติกส์และซัพพลายเชน</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">วิชาอุตสาหกรรมอาหาร</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">อาหารและโภชนาการ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>อาหารและโภชนาการ</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  วิชาศิลปกรรมและเศรษฐกิจสร้างสรรค์
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">ดิจิทัลกราฟิก</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>ดิจิทัลกราฟิก</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">วิชาศิลปกรรม</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">ดิจิทัลกราฟิก</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>ดิจิทัลกราฟิก</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  วิชาอุตสาหกรรมแฟชั่นและสิ่งทอ
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">
+                      เทคโนโลยีแฟชั่นและเครื่องแต่งกาย
+                    </h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>เทคโนโลยีแฟชั่นและเครื่องแต่งกาย</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  วิชาอุตสาหกรรมดิจิทัลและเทคโนโลยีสารสนเทศ
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">เทคโนโลยีธุรกิจดิจิทัล</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>เทคโนโลยีธุรกิจดิจิทัล</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+          </article>
+        </div>
+        <div
+          class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 text-gray-900"
+        >
+          <header class="border-b pb-1 flex items-center space-x-2">
+            <h2 class="font-bold text-xl">
+              หลักสูตรประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) พุทธศักราช 2567
+              หลักสูตร 2 ปี รับจากผู้สำเร็จการศึกษาระดับ ปวช.
+            </h2>
+          </header>
+          <article class="py-2 grid grid-cols-2 gap-6">
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาบริหารธุรกิจ</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการบัญชี</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการบัญชี</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมท่องเที่ยว
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการโรงแรม</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการโรงแรม</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการท่องเที่ยว</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการท่องเที่ยว</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมโลจิสติกส์
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">
+                      สาขาวิชาการจัดการโลจิสติกส์และซัพพลายเชน
+                    </h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการจัดการโลจิสติกส์และซัพพลายเชน</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาอุตสาหกรรมอาหาร</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาอาหารและโภชนาการ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานอาหารและโภชนาการ</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาเชฟอาหารไทย</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานเชฟอาหารไทย</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมแฟชั่นและสิ่งทอ
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">
+                      สาขาวิชาเทคโนโลยีแฟชั่นและเครื่องแต่งกาย
+                    </h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานเทคโนโลยีแฟชั่นและเครื่องแต่งกาย</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมดิจิทัลและเทคโนโลยีสารสนเทศ
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">
+                      สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล
+                    </h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานเทคโนโลยีธุรกิจดิจิทัล</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+          </article>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

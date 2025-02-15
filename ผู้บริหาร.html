@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์สถานศึกษา</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 50%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        .news {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .news-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        footer {
+            text-align: center;
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logosvc.png" alt="โลโก้สถานศึกษา">
+            <h1>วิทยาลัยอาชีวศึกษาสุราษฎร์ธานี</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าแรก</a></li> <!-- index.html -->
+            <li><a href="ผู้บริหาร.html">ผู้บริหาร</a></li> <!-- ผู้บริหาร.html -->
+            <li><a href="บุคลากร.html">บุคลากร</a></li> <!-- บุคลากร.html -->
+            <li><a href="นักเรียนนักศึกษา.html">นักเรียนนักศึกษา</a></li> <!-- นักเรียนนักศึกษา.html -->
+            <li><a href="สาขาวิชา.html">สาขาวิชา</a></li> <!-- สาขาวิชา.html -->
+            </ul>
+        </nav>
+    </header>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        padding: 20px;
+      }
+      .max-w-7xl {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .bg-white {
+        background-color: #ffffff;
+      }
+      .shadow-sm {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .sm\:rounded-lg {
+        border-radius: 10px;
+      }
+      .p-6 {
+        padding: 24px;
+      }
+      .text-gray-900 {
+        color: #333;
+      }
+      .border-b {
+        border-bottom: 2px solid #ddd;
+      }
+      .pb-1 {
+        padding-bottom: 8px;
+      }
+      .font-bold {
+        font-weight: bold;
+      }
+      .text-xl {
+        font-size: 1.25rem;
+      }
+      .text-lg {
+        font-size: 1rem;
+      }
+      .space-x-2 {
+        margin-right: 0.5rem;
+      }
+      .space-y-2 {
+        margin-top: 1rem;
+      }
+      .flex {
+        display: flex;
+      }
+      .grid {
+        display: grid;
+      }
+      .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .gap-2 {
+        gap: 0.5rem;
+      }
+      .col-span-2 {
+        grid-column: span 2;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .px-5 {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .bg-primary-100 {
+        background-color: #e7f3ff;
+      }
+      .p-1 {
+        padding: 0.25rem;
+      }
+      .px-2 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .rounded-sm {
+        border-radius: 5px;
+      }
+      .img-container {
+        width: 100%;
+        max-width: 150px;
+        margin-top: 10px;
+      }
+      .img-container img {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+      }
+      header h2 {
+        color: #0056b3;
+      }
+      header span {
+        color: #888;
+      }
+      article ul li span {
+        color: #333;
+      }
+      .header-container {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="py-12 space-y-5">
+        
+        <!-- นายพงษ์ศักดิ์ นุ้ยเจริญ -->
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 text-gray-900">
+            <header class="border-b pb-1 flex items-center space-x-2">
+              <h2 class="font-bold text-xl">นายพงษ์ศักดิ์ นุ้ยเจริญ</h2>
+              <span class="text-xl">-</span>
+              <p class="text-lg">ผู้อำนวยการวิทยาลัยอาชีวศึกษาสุราษฎร์ธานี</p>
+            </header>
+            <article class="grid grid-cols-3 gap-2 mt-2">
+              <div class="col-span-2 flex items-center px-5">
+                <ul class="space-y-2">
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">ประวัติการศึกษา</span>
+                    <span class="block">ค.บ.(อุตสาหกรรมศิลป์) ค.ม.(การบริหารการศึกษา)</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">วิทยฐานะ</span>
+                    <span class="block">ผู้อำนวยการชำนาญการพิเศษ</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">ตำแหน่ง</span>
+                    <span class="block">ผู้อำนวยการวิทยาลัยอาชีวศึกษาสุราษฎร์ธานี</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">เบอร์โทรศัพท์</span>
+                    <span class="block">102</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex justify-center items-center">
+                <div class="img-container">
+                  <img src="t1.jpg" alt="นายพงษ์ศักดิ์ นุ้ยเจริญ" />
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- นายประเสริฐ ทองสาลี -->
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 text-gray-900">
+            <header class="border-b pb-1 flex items-center space-x-2">
+              <h2 class="font-bold text-xl">นายประเสริฐ ทองสาลี</h2>
+              <span class="text-xl">-</span>
+              <p class="text-lg">รองผู้อำนวยการวิทยาลัย ฝ่ายบริหารทรัพยากร</p>
+            </header>
+            <article class="grid grid-cols-3 gap-2 mt-2">
+              <div class="col-span-2 flex items-center px-5">
+                <ul class="space-y-2">
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">ประวัติการศึกษา</span>
+                    <span class="block">ศษ.ม (การบริหารการศึกษา)</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">วิทยฐานะ</span>
+                    <span class="block">รองผู้อำนวยการชำนาญการพิเศษ</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">ตำแหน่ง</span>
+                    <span class="block">รองผู้อำนวยการวิทยาลัย ฝ่ายบริหารทรัพยากร</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">เบอร์โทรศัพท์</span>
+                    <span class="block">105</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex justify-center items-center">
+                <div class="img-container">
+                  <img src="t2.jpg" alt="นายประเสริฐ ทองสาลี" />
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- นางสาวสุธาสินี คงทอง -->
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 text-gray-900">
+            <header class="border-b pb-1 flex items-center space-x-2">
+              <h2 class="font-bold text-xl">นางสาวสุธาสินี คงทอง</h2>
+              <span class="text-xl">-</span>
+              <p class="text-lg">รองผู้อำนวยการวิทยาลัย ฝ่ายพัฒนากิจการนักเรียนนักศึกษา</p>
+            </header>
+            <article class="grid grid-cols-3 gap-2 mt-2">
+              <div class="col-span-2 flex items-center px-5">
+                <ul class="space-y-2">
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">ประวัติการศึกษา</span>
+                    <span class="block">ปร.ด. (การบริหารการศึกษา) กศ.ม. (อุตสาหกรรมศึกษา)</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">วิทยฐานะ</span>
+                    <span class="block">รองผู้อำนวยการชำนาญการ</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">ตำแหน่ง</span>
+                    <span class="block">รองผู้อำนวยการวิทยาลัย ฝ่ายพัฒนากิจการนักเรียนนักศึกษา</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">เบอร์โทรศัพท์</span>
+                    <span class="block">114</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex justify-center items-center">
+                <div class="img-container">
+                  <img src="t3.jpg" alt="นางสาวสุธาสินี คงทอง" />
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- นายจักรี เชิดชู -->
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 text-gray-900">
+            <header class="border-b pb-1 flex items-center space-x-2">
+              <h2 class="font-bold text-xl">นายจักรี เชิดชู</h2>
+              <span class="text-xl">-</span>
+              <p class="text-lg">รองผู้อำนวยการวิทยาลัย ฝ่ายวิชาการ</p>
+            </header>
+            <article class="grid grid-cols-3 gap-2 mt-2">
+              <div class="col-span-2 flex items-center px-5">
+                <ul class="space-y-2">
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">ประวัติการศึกษา</span>
+                    <span class="block">ศษ.ม (การศึกษา)</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">วิทยฐานะ</span>
+                    <span class="block">รองผู้อำนวยการชำนาญการ</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">ตำแหน่ง</span>
+                    <span class="block">รองผู้อำนวยการวิทยาลัย ฝ่ายวิชาการ</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">เบอร์โทรศัพท์</span>
+                    <span class="block">120</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex justify-center items-center">
+                <div class="img-container">
+                  <img src="t4.jpg" alt="นายจักรี เชิดชู" />
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- นางวรรณวิสา ศิริอ่อน -->
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 text-gray-900">
+            <header class="border-b pb-1 flex items-center space-x-2">
+              <h2 class="font-bold text-xl">นางวรรณวิสา ศิริอ่อน</h2>
+              <span class="text-xl">-</span>
+              <p class="text-lg">รองผู้อำนวยการวิทยาลัย ฝ่ายพัฒนาทรัพยากรมนุษย์</p>
+            </header>
+            <article class="grid grid-cols-3 gap-2 mt-2">
+              <div class="col-span-2 flex items-center px-5">
+                <ul class="space-y-2">
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">ประวัติการศึกษา</span>
+                    <span class="block">ศษ.ม (การบริหารการศึกษา)</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">วิทยฐานะ</span>
+                    <span class="block">รองผู้อำนวยการชำนาญการ</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">ตำแหน่ง</span>
+                    <span class="block">รองผู้อำนวยการวิทยาลัย ฝ่ายพัฒนาทรัพยากรมนุษย์</span>
+                  </li>
+                  <li class="space-y-1">
+                    <span class="font-bold bg-primary-100 p-1 px-2 rounded-sm">เบอร์โทรศัพท์</span>
+                    <span class="block">125</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex justify-center items-center">
+                <div class="img-container">
+                  <img src="t5.png" alt="นางวรรณวิสา ศิริอ่อน" />
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>
